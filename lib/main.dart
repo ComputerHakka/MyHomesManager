@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'features/home/f_home.dart';
 
 void main() {
-  runApp(const MyHomesManager());
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const ProviderScope(child: MyHomesManager()));
 }
 
 class MyHomesManager extends StatelessWidget {
