@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_homes_manager/features/home/presentation/widgets/bottom_nav.dart';
+import 'package:my_homes_manager/features/main/presentation/widgets/bottom_nav.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

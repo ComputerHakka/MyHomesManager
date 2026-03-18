@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/home/f_home.dart';
+import 'features/main/f_home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

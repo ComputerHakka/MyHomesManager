@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:my_homes_manager/data/local/tables/meters.dart';
+import 'package:my_homes_manager/data/local/database/tables/meters.dart';
 
 @TableIndex(name: 'idx_metrics_meter', columns: {#meterId})
 class MeterMetrics extends Table {
