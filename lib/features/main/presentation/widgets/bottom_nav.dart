@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({super.key});
+  const CustomBottomNavigationBar({
+    super.key,
+    required this.onTap,
+    required this.currentIndex,
+  });
+
+  final void Function(int index) onTap;
+  final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(items: bottomNavItems);
+    return BottomNavigationBar(
+      currentIndex: currentIndex,
+      items: bottomNavItems,
+      onTap: onTap,
+    );
   }
 }
 
