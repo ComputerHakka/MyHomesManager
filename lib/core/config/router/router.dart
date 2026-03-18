@@ -33,12 +33,13 @@ final routerProvider = Provider<GoRouter>((ref) {
                 name: RouteNames.myApartments,
                 builder: (context, state) => const MyApartmentsScreen(),
                 routes: [
-                  // GoRoute(
-                  //   path: 'details/:id',
-                  //   builder: (context, state) => ApartmentDetailsScreen(
-                  //     id: int.parse(state.pathParameters['id']!),
-                  //   ),
-                  // ),
+                  GoRoute(
+                    path: 'details/:id',
+                    name: RouteNames.apartmentDetails,
+                    builder: (context, state) => ApartmentDetailsScreen(
+                      id: int.parse(state.pathParameters['id']!),
+                    ),
+                  ),
                 ],
               ),
             ],

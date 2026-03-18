@@ -32,7 +32,14 @@ class MyApartmentsScreen extends ConsumerWidget {
                   return ListTile(
                     title: Text(apartment.name),
                     subtitle: Text(apartment.address ?? 'Адрес не указан'),
-                    onTap: () {},
+                    onTap: () {
+                      ref
+                          .read(routerProvider)
+                          .goNamed(
+                            RouteNames.apartmentDetails,
+                            pathParameters: {'id': apartment.id.toString()},
+                          );
+                    },
                   );
                 },
               ),
