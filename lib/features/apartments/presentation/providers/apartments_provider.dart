@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../data/local/database.dart';
-import '../../data/repositories.dart';
-import '../../domain/repositories.dart';
+import '../../../../data/local/database/database.dart';
+import '../../data/repositories/repositories.dart';
+import '../../domain/repositories/repositories.dart';
 
 final apartmentsRepositoryProvider = Provider<ApartmentsRepository>((ref) {
   final db = ref.watch(databaseProvider);

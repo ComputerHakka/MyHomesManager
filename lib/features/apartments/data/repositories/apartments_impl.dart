@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
 
-import '../../../../data/local/database.dart';
-import '../../domain/repositories.dart';
+import '../../../../data/local/database/database.dart';
+import '../../domain/repositories/repositories.dart';
 
 class ApartmentsRepositoryImpl implements ApartmentsRepository {
   final AppDatabase _db;

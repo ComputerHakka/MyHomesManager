@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../features/apartments/presentation/f_apartments.dart';
-import '../../../features/main/f_home.dart';
-import '../../../features/settings/presentation/f_settings.dart';
-import '../../../features/statistic/presentation/f_statistic.dart';
+import '../../../features/features.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorApartmentsKey = GlobalKey<NavigatorState>(

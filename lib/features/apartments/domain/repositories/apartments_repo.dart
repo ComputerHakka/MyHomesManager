@@ -1,4 +1,4 @@
-import '../../../../data/local/database.dart';
+import '../../../../data/local/database/database.dart';
 
 abstract class ApartmentsRepository {
   Stream<List<Apartment>> watchAllApartments();
