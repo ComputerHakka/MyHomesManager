@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../features/features.dart';
+import '../../constants/constants.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorApartmentsKey = GlobalKey<NavigatorState>(
@@ -15,7 +16,7 @@ final _shellNavigatorSettingsKey = GlobalKey<NavigatorState>(
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/apartments',
+    initialLocation: '/my_apartments',
     navigatorKey: _rootNavigatorKey,
     routes: [
       StatefulShellRoute.indexedStack(
@@ -28,7 +29,8 @@ final routerProvider = Provider<GoRouter>((ref) {
             navigatorKey: _shellNavigatorApartmentsKey,
             routes: [
               GoRoute(
-                path: '/apartments',
+                path: '/my_apartments',
+                name: RouteNames.myApartments,
                 builder: (context, state) => const MyApartmentsScreen(),
                 routes: [
                   // GoRoute(
@@ -46,6 +48,7 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [
               GoRoute(
                 path: '/statistics',
+                name: RouteNames.statistic,
                 builder: (context, state) => const StatisticScreen(),
               ),
             ],
@@ -55,11 +58,17 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [
               GoRoute(
                 path: '/settings',
+                name: RouteNames.settings,
                 builder: (context, state) => const SettingsScreen(),
               ),
             ],
           ),
         ],
+      ),
+      GoRoute(
+        path: '/new_apartment',
+        name: RouteNames.newApartment,
+        builder: (context, state) => NewApartmentScreen(),
       ),
     ],
   );
